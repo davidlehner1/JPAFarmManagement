@@ -1,0 +1,62 @@
+###
+
+# Own JSON Array
+GET http://localhost:8080/farm/myJsonArray
+Accept: application/json
+
+###
+
+# Own JSON Object
+GET http://localhost:8080/farm/myjson
+Accept: application/json
+
+###
+
+# Custom Response
+GET http://localhost:8080/farm/myresponse?no=1
+Accept: application/json
+
+###
+
+# Create a new farm via POST
+POST http://localhost:8080/farm
+Accept: application/json
+
+{
+    "street": "123 Farm Road",
+    "houseNumber": "A1",
+    "zip": 12345,
+    "city": "Farmville"
+}
+
+###
+
+# Get a farm via ZIP
+GET http://localhost:8080/farm/12345
+Accept: application/json
+
+###
+
+# Update a farm by index via PUT
+PUT http://localhost:8080/farm/1
+
+{
+    "id": 1,
+    "street": "Test Road",
+    "houseNumber": "B2",
+    "zip": 2345,
+    "city": "Testville"
+}
+
+###
+
+# Get all farms
+GET http://localhost:8080/farm
+Accept: application/json
+
+###
+
+# Delete a farm via index
+DELETE http://localhost:8080/farm/1
+
+###
